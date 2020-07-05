@@ -1,0 +1,12 @@
+@baseUrl = http://localhost:3000
+
+### Kill Dragon
+POST {{baseUrl}}/hero/1/kill
+Content-Type: application/json
+
+{
+    "dragonId": "100"
+}
+
+### Find Heroes
+GET {{baseUrl}}/hero
