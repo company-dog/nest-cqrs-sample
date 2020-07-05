@@ -6,11 +6,13 @@ import { CommandHandlers } from './commands/handlers';
 import { EventHandlers } from './events/handlers';
 import { QueryHandlers } from './queries/handlers';
 import { HeroesGameSagas } from './sagas/heroes.sagas';
+import { HeroesGameService } from './heroes.service';
 
 @Module({
   imports: [CqrsModule],
   controllers: [HeroesGameController],
   providers: [
+    HeroesGameService,
     HeroRepository,
     ...CommandHandlers,
     ...EventHandlers,
